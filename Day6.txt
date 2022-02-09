@@ -1,0 +1,149 @@
+--------->Q1
+package com.oops;
+
+public class DefaultValues {
+	   int varInt;
+	   float varFloat;
+	   boolean varBool;
+	   long varLong;
+	   byte varByte;
+	   short varShort;
+	   double varDouble;
+	   static int Int;
+	   static float Float;
+	   static boolean Bool;
+	   static long Long;
+	   static byte Byte;
+	   static short Short;
+	   static double Double;
+
+	public static void main(String[] args) {
+		DefaultValues def=new DefaultValues();
+		
+		
+		System.out.println("Default values for instance variables");
+		System.out.println("val2:" +def.varInt);
+		System.out.println("val2:" +def.varFloat);
+		System.out.println("val2:" +def.varBool);
+		System.out.println("val2:" +def.varLong);
+		System.out.println("val2:" +def.varByte);
+		System.out.println("val2:" +def.varShort);
+		System.out.println("val2:" +def.varDouble);
+		System.out.println("Default values for static variables");
+		System.out.println(Int);
+		System.out.println(Float);
+		System.out.println(Bool);
+		System.out.println(Long);
+		System.out.println(Byte);
+		System.out.println(Short);
+		System.out.println(Double);
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+------------->Q2
+package com.oops;
+
+public class ConsCalling {
+	void display() {
+		System.out.println("hi i am method calling");
+	}
+	ConsCalling() {
+		System.out.println("hi iam constructor calling");
+	}
+	public static void main(String[] args) {
+		ConsCalling cons=new ConsCalling();
+		cons.display();
+	}
+
+}
+------------>Q3
+package com.oops;
+
+public class Student {
+	int stId;
+	String stName;
+	Student() {
+		stId=108;
+		stName="singh";
+		System.out.println(stId);
+		System.out.println(stName);
+		
+	}
+	void value() {
+		this.stId=109;
+		this.stName="sahil";
+		System.out.println(stId);
+		System.out.println(stName);
+		
+	}
+
+	public static void main(String[] args) {
+		Student st=new Student();
+		st.value();		// TODO Auto-generated method stub
+
+	}
+
+}
+--------->Q4
+package com.oops;
+
+public class Employee {
+	int empId,conNum;
+	String empName;
+	
+	    Employee(int i,int n,String s) {
+		 empId=i;
+		 empName=s;
+		 conNum=n;
+	}
+	void display() {
+		System.out.println(empId+" "+empName+" "+conNum);
+	}
+
+	public static void main(String[] args) {
+		Employee emp=new Employee(12,3232,"sahil");
+		emp.display();
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+--------->Q5
+package com.oops;
+
+ class Animal {
+	void type() {
+		System.out.println("animal is parent class");
+	}
+
+}
+class dog extends Animal {
+	void type() {
+		System.out.println("dog is child class");
+	}
+	public static void main(String[] args) {
+		dog dg=new dog();
+		dg.type();
+	}
+}
+--------->Q6
+package com.oops;
+public class Employe {
+   float salary=40000;
+}
+
+public class Inheritence extends Employe {
+	int bonus=3000;
+	public static void main(String[] args) {
+		Inheritence i=new Inheritence();
+		System.out.println("salary is:"+i.salary);
+		System.out.println("bonus is:"+i.bonus);
+		
+	}
+
+}
+---------->Q7

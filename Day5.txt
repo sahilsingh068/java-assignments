@@ -1,0 +1,169 @@
+package com.arrays;
+
+public class Test1 {
+	public static void main (String[] args) {
+		int x[]= {34,56,32,57,76,67};
+		for(int j:x) {
+			System.out.println(j);
+		}
+	}
+
+}
+------->Q2
+package com.arrays;
+
+public class Test2 {
+	public static void main(String[] args) {
+		int arr[]= {10,20,30};
+		int avg=(arr[0]+arr[1]+arr[2])/3;
+		System.out.println("Average of three numbers is:" +avg);
+	}
+
+}
+------->Q3
+package com.arrays;
+
+public class Test3 {
+	public static void main(String[] args) {
+		char arr[]= {'s','a','h','i','l'};
+		String str=String.valueOf(arr);
+		System.out.println(str);
+	}
+
+}
+------->Q4
+package com.arrays;
+
+public class Test4 {
+	public static void main (String[] args) {
+		int arr[]= {2,3,4};
+		System.out.println(arr.getClass().getName());
+	}
+
+}
+-------->Q5
+package com.arrays;
+
+public class Test5 {
+
+	public static void main(String[] args) {
+		int a[]= {23,43,56,32,56};
+		min(a);
+		
+		// TODO Auto-generated method stub
+
+	}
+	static void min(int arr[]) {
+		int min=arr[0];
+		for(int i=0;i<arr.length;i++) {
+			if(min>arr[i])
+				min=arr[i];
+		}
+		System.out.println(min);
+	}
+
+}
+------->Q6
+package com.arrays;
+
+public class Test6 {
+
+	public static void main(String[] args) {
+		int a[][]= {{1,2,3},{3,4,6},{4,5,6}};
+		int b[][]= {{3,2,4},{6,4,7},{7,5,3}};
+		int c[][]=new int[3][3];
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				c[i][j]=a[i][j]+b[i][j];
+				System.out.print(c[i][j]+ " ");
+			}
+			System.out.println();
+			
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-------->Q7
+package com.arrays;
+
+public class ParamEx {
+	ParamEx() {
+		System.out.println("without parameter");
+	}
+	ParamEx(int x) {
+		System.out.println("With parameter");
+	}
+	public static void main (String[] args) {
+		ParamEx pr=new ParamEx(56);
+		ParamEx p=new ParamEx();
+	}
+
+}
+------->Q8
+package com.arrays;
+
+public class Student {
+	int id;
+	String name;
+	void assign() {
+		id=108;
+		name="sahil";
+	}
+	void display() {
+		System.out.print(id+" "+name);
+	}
+
+	public static void main(String[] args) {
+		Student st=new Student();
+		st.assign();
+		st.display();
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+------->Q9
+package com.arrays;
+
+public class Calculator {
+	 static void cal(int a,int b) {
+		 System.out.println(a+b);
+		 System.out.println(a-b);
+		 System.out.println(a*b);
+		 System.out.println(a/b);
+		
+	}
+
+	public static void main(String[] args) {
+		Calculator.cal(9,4);// static method calling
+		//System.out.println();
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+------->Q10
+package com.arrays;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+		String s="sahilSingh";
+		System.out.println(s.toUpperCase());
+		System.out.println(s);
+		System.out.println(s.toLowerCase());
+	    System.out.println(s.startsWith("Sa"));
+	    System.out.println(s.endsWith("ln"));
+	    System.out.println(s.length());
+	    System.out.println(s.charAt(0));//S    
+	    System.out.println(s.charAt(3));
+		// TODO Auto-generated method stub
+
+	}
+
+}

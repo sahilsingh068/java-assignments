@@ -1,0 +1,100 @@
+Q2.
+ gedit test.sh
+
+Q4.
+ gedit test.sh
+ ls -l test.sh
+ chmod a+x test.sh
+ ./test.sh
+ 
+ 
+Q5.
+#!/bin/bash
+
+echo "Part 1 of script."
+a=1
+
+
+
+Q3. 
+ gedit hello.sh
+ echo "hello world"
+
+
+Q8.
+   ls|wc -l (number of files in current working directory)
+
+Q9.
+  $ wc -l filename.txt (no of lines in files)
+  
+  
+Q10. pwd (print the current working directory)
+
+Q11.
+ echo "enter name"
+ read name
+ echo "$name"
+  then execute file.
+  
+  
+Q13.
+#!/bin/bash
+a=10
+b=20
+if [$a=$b]
+then
+echo "a is equal to b"
+else
+echo "a is not equal to b"
+fi
+
+
+Q14.
+fruit="apple"
+case "$fruit" in
+"apple") echo "apple are famous"
+;;
+"walnut") echo "walnut are famous"
+;;
+"mango") echo "mango are famous"
+;;
+esac
+
+
+-------------------------------------github----------------------
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test
+$ git init
+Initialized empty Git repository in C:/Users/Sahil/OneDrive/Desktop/test/.git/
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git add .
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git commit -m
+error: switch `m' requires a value
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git commit -m "this is our first commit"
+[master (root-commit) e3c309a] this is our first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git add .
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   second.txt
+        new file:   third.txt
+
+
+Sahil@DESKTOP-COH2HCK MINGW64 ~/OneDrive/Desktop/test (master)
+

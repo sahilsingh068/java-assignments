@@ -1,0 +1,62 @@
+-------->Q4
+package com.oops;
+
+class A {
+	private int data=10;
+	private void message() {
+		System.out.println("i am private");
+	}
+}
+public class PrivateAM {
+	public static void main(String[] args) {
+		A a=new A();
+		System.out.println(a.data);
+		a.message();
+		
+	}
+
+}
+--------->Q5
+package pack1;
+
+public class ProtectedClass {
+	protected void show() {
+		System.out.println("I am protected");
+	}
+
+}
+
+package mypack;
+import pack1.*;
+class ProtectedAccess extends ProtectedClass { 
+	public static void main(String[] args) {
+		ProtectedAccess obj=new ProtectedAccess();
+		obj.show();
+	}
+}
+---------->Q2
+package com.oops;
+abstract class Tea {
+	abstract void addIngredient();
+	void addMilk() {
+		System.out.println("add milk in Tea");
+	}
+}
+class Coffee extends Tea {
+	//abstract void addIngredient();
+	void addIngredient() {
+		System.out.println("add milk in coffee");
+	}
+}
+public class Beverages  {
+
+	public static void main(String[] args) {
+		Coffee bev=new Coffee();
+		bev.addMilk();
+		bev.addIngredient();
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-------->Q1
