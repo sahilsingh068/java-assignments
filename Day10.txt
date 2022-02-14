@@ -1,0 +1,45 @@
+*********Merge Sort**********
+mergeSort(arr,l,r){
+    if(l<r)
+    {
+	int mid=(l+r)/2;
+	mergeSort(arr,l,mid);
+	mergeSort(l,mid+1,r);
+	merge(a,l,mid,r);
+	}
+}
+********Bubble Sort**********
+package com.oops;
+
+public class BubbleSort {
+	void bubblesort(int arr[]) {
+		int n=arr.length;
+		for(int i=0;i<n-1;i++) {
+			for(int j=0;j<n-i-1;j++) {
+				if(arr[j]>arr[j+1]) {
+					int temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+	}
+	void print(int arr[]) {
+		int n=arr.length;
+		for(int i=0;i<n;i++) {
+			System.out.println(arr[i] +" ");
+		}
+		//System.out.println();
+	}
+
+	public static void main(String[] args) {
+		BubbleSort b=new BubbleSort();
+		int arr[]= {23,5,46,75,20,51,87,4};
+		b.bubblesort(arr);
+		System.out.println("Sorted array");
+		b.print(arr);
+		// TODO Auto-generated method stub
+
+	}
+
+}
