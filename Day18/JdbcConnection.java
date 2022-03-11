@@ -21,7 +21,7 @@ public class JdbcConnection {
 		 // create table
 		// boolean result=stmt.execute("create table media(userName varchar(50),password varchar(40))");
 		// System.out.println("Table created:"+result);
-		//  int result=stmt.executeUpdate("insert into media values ('sahil','singh@123')");
+		//  int result=stmt.executeUpdate("insert into media values ('sahil','singh')");
 		 // System.out.println("insert record" +result);
 		 PreparedStatement stmt=conn.prepareStatement("select * from media where userName=? and password=?");
 		 stmt.setString(1, userName);
