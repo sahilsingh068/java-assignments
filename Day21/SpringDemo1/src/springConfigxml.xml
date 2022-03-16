@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config></context:annotation-config>
+
+<bean class="com.springdemo.Student" id="studentbean">    <!--Employee sleeping=new Employee();  -->
+
+<property name="stId" value="100"> </property>
+<property name="name" value="sahil"> </property>
+
+</bean>
+<bean id="add" class="com.springdemo.Address">  
+<property name="street" value="51,Lohianagar"></property>  
+<property name="city" value="Ghaziabad"></property>  
+<property name="state" value="UP"></property>  
+<property name="country" value="India"></property>  
+</bean>  
+
+
+</beans>
