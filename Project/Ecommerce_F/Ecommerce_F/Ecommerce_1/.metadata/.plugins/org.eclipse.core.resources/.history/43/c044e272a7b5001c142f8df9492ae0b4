@@ -1,0 +1,168 @@
+package com.ecom.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ecom.dao.AdminDao;
+import com.ecom.dao.ProductDao;
+import com.ecom.dao.SellerDao;
+import com.ecom.entity.Admin;
+import com.ecom.entity.Product;
+import com.ecom.entity.Seller;
+
+
+@Controller
+public class ProductController {
+
+	@Autowired
+	ProductDao productdao;
+	
+	@Autowired
+	SellerDao sellerdao;
+	
+	@Autowired
+	AdminDao admindao;
+	
+	@RequestMapping("/")
+	public String home()
+	{
+		return "Home.jsp"; 
+	}
+	
+	// PRODUCT //
+	
+	@RequestMapping("/addProduct")
+	public String addProduct(Product p)
+	{	
+		productdao.save(p);
+		//String name=p.getPname();
+		return "productdisplay.jsp";
+	}
+	
+	@RequestMapping("/updateProduct")
+	public String updateProduct(Product p)
+	{	
+		productdao.save(p);
+		//String name=p.getPname();
+		return "productdisplay.jsp";
+	}
+	
+	@RequestMapping("/deleteProduct")
+	public String deleteProduct(int id)
+	{	
+		productdao.deleteById(id);
+		//String name=p.getPname();
+		return "productdisplay.jsp";
+	}
+	
+	@RequestMapping("/add")
+	public String add()
+	{
+		return "productadd.jsp";
+	}
+	
+	@RequestMapping("/update")
+	public String update()
+	{
+		return "productupdate.jsp";
+	}
+	
+	@RequestMapping("/delete")
+	public String delete()
+	{
+		return "productdelete.jsp";
+	}
+	
+	
+	///////////////////////////////////////////////////////////////
+	
+	// SELLER //
+	
+	@RequestMapping("/seller")
+	public String seller()
+	{	
+		return "sellerdisplay.jsp";
+	}
+	
+	// ADD SELLER //
+	@RequestMapping("/addseller")
+	public String addSeller()
+	{	
+		return "selleradd.jsp";
+	}
+	
+	@RequestMapping("/addingSeller")
+	public String addingSeller(Seller s)
+	{	
+		sellerdao.save(s);
+		return "productdisplay.jsp"; //
+	}
+	
+	// UPDATE SELLER //
+	@RequestMapping("/updateseller")
+	public String updateSeller()
+	{	
+		return "sellerupdate.jsp";
+	}
+	
+	@RequestMapping("/updatingSeller")
+	public String updatingSeller(Seller s)
+	{	
+		sellerdao.save(s);
+		return "sellerdisplay.jsp";
+	}
+	
+	// DELETE SELLER //
+	@RequestMapping("/deleteseller")
+	public String deleteSeller()
+	{	
+		return "sellerdelete.jsp";
+	}
+	
+	@RequestMapping("/deletingSeller")
+	public String deletingSeller(int id)
+	{	
+		sellerdao.deleteById(id);
+		return "sellerdisplay.jsp";
+	}
+	
+	
+	
+	///////////////////////////////////////////////////
+	
+	// ADMIN //
+	
+	@RequestMapping("/admin")
+	public String admin()
+	{	
+		return "admindisplay.jsp";
+	}
+	
+	@RequestMapping("/addadmin")
+	public String addAdmin()
+	{	
+		return "adminadd.jsp";
+	}
+	
+	@RequestMapping("/addingAdmin")
+	public String addingAdmin(Admin a)
+	{	
+		admindao.save(a);
+		return "admincontrol.jsp";
+	}
+	
+	@RequestMapping("/adminaddingseller")
+	public String adminaddseller(Admin a)
+	{	
+		admindao.save(a);
+		return "admincontrol.jsp";
+	}
+	
+	@RequestMapping("/admindeletingseller")
+	public String admindeletingseller(int id)
+	{	
+		admindao.deleteById(id);
+		return "admincontrol.jsp";
+	}
+}

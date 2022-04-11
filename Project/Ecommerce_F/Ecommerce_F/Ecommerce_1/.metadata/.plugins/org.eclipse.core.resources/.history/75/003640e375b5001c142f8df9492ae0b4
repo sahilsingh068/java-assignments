@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/addSeller">
+Press to add seller:
+<input type="submit" value="AddSeller">
+</form>
+<form action="/updateseller">
+Press to update seller:
+<input type="submit">
+</form>
+<form action="/deleteseller">
+Press to delete seller:
+<input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="com.ecom.controller.*" %>
+    <%@ page import="com.ecom.entity.Seller" %>
+    <%@ page import="java.sql.*" %>
+    
+<%
+String driverName = "org.postgresql.Driver";
+String connectionUrl = "jdbc:postgresql://localhost/";
+String dbName = "project1";
+String userId = "postgres";
+String password = "abc123";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+Statement statement2 = null;
+ResultSet resultSet = null;
+ResultSet resultSet2 = null;
+
+%>
+<html>
+<head>
+</head>
+<body>
+<form action="/customerlogin"> 
+Enter id :
+<input type="text" value="Cid"> 
+Enter password :
+<input type="password" value="Cpassword">
+<input type="submit" id ="b1" value="Log In">
+</form>			 
+<%
+try{ 
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+statement2=connection.createStatement();
+int cid = Integer.parseInt(request.getParameter("Cid"));
+String cpass = request.getParameter("Cpassword");
+resultSet2 = statement.executeQuery("select * from Customer where Cid=" + cid);
+
+while(resultSet2.next())
+{
+	if (resultSet.getString("Cpassword").equals(cpass) && resultSet.getString("Cid").equals(cid))
+	{
+		System.out.println("You are logged in");
+	}
+	else
+		System.out.println("Invalid id or password");
+		
+	}
+
+while(resultSet.next()){
+%>
+
+<% 
+}
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
+
+<script type="text/javascript">
+
+	document.getElementById("b1").onclick=login;
+	
+					function login()
+					{	
+						alert("Welcome");
+					};
+
+</script>
+</body>
+</html>

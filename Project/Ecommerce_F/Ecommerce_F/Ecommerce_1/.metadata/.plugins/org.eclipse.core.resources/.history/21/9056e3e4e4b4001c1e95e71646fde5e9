@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="addProduct">
+Enter Product Id:
+<input type="text" name="Pid"><br>
+Enter Product Name:
+<input type="text" name="Pname"><br>
+Enter Product Price:
+<input type="text" name="Pprice"><br>
+Enter Product Category:
+<input type="text" name="Pcategory"><br>
+<input type="submit">
+<!-- (A) HTML DIALOG BOX -->
+<div id="boxBack"><div id="boxWrap">
+  <div id="boxTxt"></div>
+  <input type="button" value="OK" onclick="dbox()"/>
+</div></div>
+ 
+<!-- (B) TEST BUTTON -->
+<input type="button" value="Dialog Box" onclick="dbox('Product Added')"/>
+</div>
+</form>
+</body>
+</html>

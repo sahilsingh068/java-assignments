@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+ function executeq()
+	{
+		alert('Order has been placed');
+	};
+	

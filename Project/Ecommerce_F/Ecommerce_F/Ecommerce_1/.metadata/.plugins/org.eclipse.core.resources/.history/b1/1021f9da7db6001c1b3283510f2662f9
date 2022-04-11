@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+ function executeq()
+	{
+		var s = "insert into orders values('" + id + "','" + category + "','" + name + "','" + price + "')";
+		alert("Order has been placed");
+	};
+	

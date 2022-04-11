@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Control</title>
+</head>
+<body>
+<form action="/admin">
+<input type="submit" value="Add Seller">
+</form>
+<br>
+<form action="/seller">
+<input type="submit" value="Remove Seller">
+</form>
+<br>
+<form action="/customer">
+<input type="submit" value="Add Customer">
+</form>
+<form action="/customer">
+<input type="submit" value="Remove Customer">
+</form>
+</body>
+</html>

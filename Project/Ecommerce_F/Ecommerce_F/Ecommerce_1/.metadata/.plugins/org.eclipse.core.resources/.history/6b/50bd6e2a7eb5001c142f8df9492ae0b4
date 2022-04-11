@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Adding Admin</title>
+</head>
+<body>
+
+<form action="addingAdmin">
+Enter Admin Id:
+<input type="text" name="Aid"><br>
+Enter Admin Name:
+<input type="text" name="Aname"><br>
+Enter Admin Address:
+<input type="text" name="Aaddress"><br>
+Enter Admin Email:
+<input type="text" name="Aemail"><br>
+Enter Admin Phone Number:
+<input type="text" name="Ano"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="adminaddingSeller">
+Enter Seller Id:
+<input type="text" name="Sid"><br>
+Enter Seller Name:
+<input type="text" name="Sname"><br>
+Enter Seller Address:
+<input type="text" name="Saddress"><br>
+Enter Seller Email:
+<input type="text" name="Semail"><br>
+Enter Seller Phone Number:
+<input type="text" name="Sno"><br>
+<input type="submit" value="Add Seller">
+</form>
+</body>
+</html>
